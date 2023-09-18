@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/congenial-octo-lamp/static/css/main.7acaea2f.css",
+    "main.js": "/congenial-octo-lamp/static/js/main.07d3183d.js",
+    "index.html": "/congenial-octo-lamp/index.html",
+    "main.7acaea2f.css.map": "/congenial-octo-lamp/static/css/main.7acaea2f.css.map",
+    "main.07d3183d.js.map": "/congenial-octo-lamp/static/js/main.07d3183d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.07d3183d.js"
+  ]
+}
