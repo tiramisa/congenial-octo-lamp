@@ -1,13 +1,18 @@
-import React, { useState } from "react";
-import { FaShoppingCart } from "react-icons/fa";
-import Order from "./Order";
+import React, { useState } from 'react';
+import { FaShoppingCart } from 'react-icons/fa';
+import Order from './Order';
 
-const showOrders = (props) => {
+const showOrders = props => {
+  let summa = 0;
+  props.orders.forEach(el => (summa += Number.parseFloat(el.price)));
+  summa = summa.toFixed(2);
+
   return (
     <div>
-      {props.orders.map((el) => (
+      {props.orders.map(el => (
         <Order onDelete={props.onDelete} key={el.id} item={el} />
       ))}
+      <p className="summa">Сумма: {summa}$</p>
     </div>
   );
 };
@@ -32,7 +37,7 @@ export default function Header(props) {
         </ul>
         <FaShoppingCart
           onClick={() => setCartOpen((cartOpen = !cartOpen))}
-          className={`shop-card-button ${cartOpen && "active"}`}
+          className={`shop-card-button ${cartOpen && 'active'}`}
         />
         {cartOpen && (
           <div className="shop-cart">

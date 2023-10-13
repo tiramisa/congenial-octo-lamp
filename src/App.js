@@ -1,7 +1,7 @@
-import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Items from "./components/Items";
+import React from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Items from './components/Items';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,51 +11,51 @@ class App extends React.Component {
       items: [
         {
           id: 1,
-          img: "pillow.jpeg",
-          title: "Подушка",
+          img: 'pillow.jpeg',
+          title: 'Подушка',
           price: 19.99,
-          description: "Мягкая подушка для комфортного сна.",
-          category: "pillows",
+          description: 'Мягкая подушка для комфортного сна.',
+          category: 'pillows',
         },
         {
           id: 2,
-          img: "plaid.jpeg",
-          title: "Плед",
+          img: 'plaid.jpeg',
+          title: 'Плед',
           price: 34.99,
-          description: "Теплый и уютный плед для холодных вечеров.",
-          category: "plaids",
+          description: 'Теплый и уютный плед для холодных вечеров.',
+          category: 'plaids',
         },
         {
           id: 3,
-          img: "table.jpeg",
-          title: "Кофейный столик",
+          img: 'table.jpeg',
+          title: 'Кофейный столик',
           price: 89.99,
-          description: "Современный кофейный столик для вашей гостиной.",
-          category: "tables",
+          description: 'Современный кофейный столик для вашей гостиной.',
+          category: 'tables',
         },
         {
           id: 4,
-          img: "vase.jpeg",
-          title: "Ваза",
+          img: 'vase.jpeg',
+          title: 'Ваза',
           price: 12.99,
-          description: "Элегантная ваза для цветов.",
-          category: "vases",
+          description: 'Элегантная ваза для цветов.',
+          category: 'vases',
         },
         {
           id: 5,
-          img: "lamp.jpeg",
-          title: "Лампа",
+          img: 'lamp.jpeg',
+          title: 'Лампа',
           price: 15.99,
-          description: "Уютная лампа для спальни.",
-          category: "lamps",
+          description: 'Уютная лампа для спальни.',
+          category: 'lamps',
         },
         {
           id: 6,
-          img: "chair.jpeg",
-          title: "Кресло",
+          img: 'chair.jpeg',
+          title: 'Кресло',
           price: 15.99,
-          description: "Удобное и стильное кресло.",
-          category: "chairs",
+          description: 'Удобное и стильное кресло.',
+          category: 'chairs',
         },
       ],
     };
@@ -73,11 +73,11 @@ class App extends React.Component {
   }
 
   deleteOder(id) {
-    console.log(id);
+    this.setState({ orders: this.state.orders.filter(el => el.id !== id) });
   }
   addToOrder(item) {
     let isInArray = false;
-    this.state.orders.forEach((el) => {
+    this.state.orders.forEach(el => {
       if (el.id === item.id) isInArray = true;
     });
     if (!isInArray) this.setState({ orders: [...this.state.orders, item] });

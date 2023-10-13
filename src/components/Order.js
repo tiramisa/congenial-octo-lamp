@@ -7,7 +7,7 @@ export class Order extends Component {
         <img
           width={360}
           height={350}
-          src={'/img/' + this.props.item.img}
+          src={'./img/' + this.props.item.img}
           alt=""
         />
         <h2>{this.props.item.title}</h2>
