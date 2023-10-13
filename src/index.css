@@ -12,6 +12,10 @@ body {
   font-weight: 300;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .wrapper {
   width: 1200px;
   margin: 50px auto;
@@ -166,10 +170,33 @@ header .presentation::before {
   transition: all 500ms ease;
 }
 
-.categories div:hover {
+.categories div:hover,
+.categories div:focus {
   border-color: silver;
   transform: scale(1.05);
 
+}
+
+.full-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(36, 36, 36, 0.4);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-item>div {
+  width: 600px;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 9px;
+  position: relative;
+  z-index: 1;
 }
 
 main {
@@ -189,7 +216,8 @@ main .item {
   padding-bottom: 20px;
 }
 
-main .item img {
+main .item img,
+.full-item img {
   width: 100%;
   border-radius: 10px 10px 0 0;
   transition: transform 500ms ease;
@@ -197,27 +225,39 @@ main .item img {
 }
 
 main .item img:hover,
-main .item img:focus {
+main .item img:focus,
+.full-item .item img:focus,
+.full-item .item img:hover {
   transform: scale(1.05);
 }
 
 main h2,
+.full-item h2,
 main p,
-main b {
+.full-item p,
+main b,
+.full-item b {
   margin: 10px 20px;
   color: #333;
 }
 
 main b {
   font-size: 10px;
-  font-weight: 100;
+  font-weight: 200;
 }
 
-main p {
+.full-item b {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+main p,
+.full-item p {
   color: #5fa36a;
 }
 
-main .add-to-cart {
+main .add-to-cart,
+.full-item .add-to-cart {
   position: absolute;
   right: 20px;
   bottom: 20px;
@@ -234,8 +274,26 @@ main .add-to-cart {
 }
 
 main .add-to-cart:hover,
-main .add-to-cart:focus {
+main .add-to-cart:focus,
+.full-item .add-to-cart:hover,
+.full-item .add-to-cart:focus {
   transform: scale(1.2) translateY(-5px);
+}
+
+.close-button {
+  background: transparent;
+  color: #ca5252;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 30px;
+  transition: all 500ms ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #ff0000;
+  transform: scale(1.1);
 }
 
 footer {
