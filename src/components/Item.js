@@ -9,6 +9,7 @@ export class Item extends Component {
           height={350}
           src={'./img/' + this.props.item.img}
           alt=""
+          onClick={() => this.props.onShowItem()}
         />
         <h2>{this.props.item.title}</h2>
         <p>{this.props.item.price}$</p>

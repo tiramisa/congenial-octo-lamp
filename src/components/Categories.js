@@ -23,6 +23,7 @@ export class Categories extends Component {
         },
       ],
     };
+    props.chooseCategory('all');
   }
 
   render() {

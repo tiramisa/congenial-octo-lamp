@@ -62,26 +62,35 @@ class App extends React.Component {
         },
       ],
       showFullItem: false,
+      fullItem: {},
     };
+
     this.currentItems = this.state.items;
     this.addToOrder = this.addToOrder.bind(this);
     this.deleteOder = this.deleteOder.bind(this);
     this.chooseCategory = this.chooseCategory.bind(this);
+    this.onShowItem = this.onShowItem.bind(this);
   }
   render() {
     return (
       <div className="wrapper">
         <Header orders={this.state.orders} onDelete={this.deleteOder} />
         <Categories chooseCategory={this.chooseCategory} />
-        <Items items={this.state.currentItems} onAdd={this.addToOrder} />
+        <Items
+          onShowItem={this.onShowItem}
+          items={this.state.currentItems}
+          onAdd={this.addToOrder}
+        />
 
-        {this.state.showFullItem && <ShowFullItem />}
+        {this.state.showFullItem && <ShowFullItem item={this.state.fullItem} />}
+
         <Footer />
       </div>
     );
   }
 
-  OnShowItem() {
+  onShowItem(item) {
+    this.setState({ fullItem: item });
     this.setState({ showFullItem: !this.state.showFullItem });
   }
 
