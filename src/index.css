@@ -131,7 +131,7 @@ header .shop-cart .item .delete-icon {
   position: relative;
   top: -40px;
   cursor: pointer;
-  transition: color, transform 500ms ease;
+  transition: color 500ms ease, transform 500ms ease;
 }
 
 header .shop-cart .item .delete-icon:hover,
@@ -311,6 +311,7 @@ main .add-to-cart:focus,
   float: right;
   margin-bottom: 30px;
   transition: all 500ms ease;
+  padding-left: 20px;
 }
 
 .close-button:hover,
