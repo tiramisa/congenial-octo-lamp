@@ -243,7 +243,6 @@ main .item {
 main .item img,
 .full-item img {
   width: 100%;
-  border-radius: 10px 10px 0 0;
   transition: transform 500ms ease;
   cursor: pointer;
 }
@@ -329,17 +328,16 @@ main .add-to-cart:focus,
 }
 
 footer {
-
   display: flex;
   flex-direction: column;
   background: var(--brand-background-color);
-  color: var(--white-color);
+  color: var(--text-color);
   text-align: center;
   padding: 50px;
 }
 
 footer a {
-  color: var(--white-color);
+  color: var(--text-color);
   text-decoration: none;
   margin: 0 5px;
   padding: 10px;

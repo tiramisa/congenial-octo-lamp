@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
+import { ImCancelCircle } from 'react-icons/im';
+
 import Order from './Order';
 
 const showOrders = props => {
@@ -52,6 +54,9 @@ export default function Header(props) {
 
         {cartOpen && (
           <div className="shop-cart">
+            <button className="close-button" onClick={() => setCartOpen(false)}>
+              <ImCancelCircle />
+            </button>
             {props.orders.length > 0 ? showOrders(props) : showNothing()}
           </div>
         )}
