@@ -34,7 +34,7 @@ export default function Header(props) {
         <div className="header">
           <a href="index.html" className="logo">
             House Staff
-          </a>
+          </a>{' '}
           <ul className="nav">
             <li>
               <a href="index.html">Про нас</a>
@@ -45,7 +45,7 @@ export default function Header(props) {
             <li>
               <a href="index.html">Кабинет</a>
             </li>
-          </ul>
+          </ul>{' '}
           <FaShoppingCart
             onClick={() => setCartOpen((cartOpen = !cartOpen))}
             className={`shop-card-button ${cartOpen && 'active'}`}

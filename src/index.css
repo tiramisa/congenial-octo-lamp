@@ -31,12 +31,10 @@ body.modal-open {
 }
 
 .wrapper {
-  width: 1200px;
-  margin: 50px auto;
+  margin: auto;
 }
 
 header {
-  width: 100%;
   position: relative;
 }
 
@@ -47,58 +45,88 @@ header {
 
 header .logo {
   color: var(--text-color);
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71em;
 }
 
-header ul.nav {
-  float: right;
-  list-style: none;
+@media screen and (min-width: 768px) {
+  header .logo {
+    font-size: 18px;
+    line-height: 1.11em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header .logo {
+    line-height: 20px;
+  }
 }
 
 header ul.nav li {
-  display: inline;
-  margin-left: 25px;
-  cursor: pointer;
-  transition: opacity 500ms ease;
+  display: none;
 }
 
-header ul.nav li:hover,
-header ul.nav li:focus {
-  opacity: 0.5;
+
+@media screen and (min-width: 1200px) {
+  header ul.nav {
+    float: right;
+    list-style: none;
+  }
+
+  header ul.nav li {
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+  }
+
+  header ul.nav li:hover,
+  header ul.nav li:focus {
+    opacity: 0.5;
+  }
 }
 
 header .shop-card-button {
-  float: right;
   cursor: pointer;
   transition: color 500ms ease, transform 500ms ease;
 }
 
-header .shop-card-button:focus,
-header .shop-card-button:hover,
-header .shop-card-button.active {
-  color: var(--base-color);
-  transform: scale(1.5);
-}
+@media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
+    header .shop-card-button {
+      float: right;
+      cursor: pointer;
+      transition: color 500ms ease, transform 500ms ease;
+    }
+  }
 
-header .shop-cart {
-  position: absolute;
-  top: 30px;
-  right: 0;
-  width: 450px;
-  background: #fafafa;
-  -webkit-box-shadow: 7px 8px 12px 8px rgba(140, 140, 140, 0.59);
-  box-shadow: 7px 8px 12px 8px rgba(140, 140, 140, 0.59);
-  z-index: 1000;
-  padding: 20px;
-  padding-bottom: 0;
-}
+  header .shop-card-button:focus,
+  header .shop-card-button:hover,
+  header .shop-card-button.active {
+    color: var(--base-color);
+    transform: scale(1.5);
+  }
 
-header .shop-cart .empty h2 {
-  font-size: 14px;
-  text-align: center;
-  color: var(--text-color);
-  margin-bottom: 20px;
+  header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    background: #fafafa;
+    -webkit-box-shadow: 7px 8px 12px 8px rgba(140, 140, 140, 0.59);
+    box-shadow: 7px 8px 12px 8px rgba(140, 140, 140, 0.59);
+    z-index: 1000;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  header .shop-cart .empty h2 {
+    font-size: 14px;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
 }
 
 header .shop-cart .item {
@@ -147,6 +175,7 @@ header .shop-cart .summa {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
 
 header .presentation {
   margin: 50px 0;
