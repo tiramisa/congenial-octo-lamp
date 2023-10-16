@@ -21,6 +21,14 @@ export class Categories extends Component {
           key: 'pillows',
           name: 'Подушки',
         },
+        {
+          key: 'lamps',
+          name: 'Лампы',
+        },
+        {
+          key: 'vases',
+          name: 'Вазы',
+        },
       ],
     };
     props.chooseCategory('all');

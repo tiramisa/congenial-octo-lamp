@@ -1,14 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Montserrat:wght@700&family=Playfair+Display&family=Ubuntu+Mono&display=swap');
+
+:root {
+  --main-color: #f1ede6;
+  --text-color: #3a2d28;
+  --base-color: #cbad8d;
+  --nude-color: #a48374;
+  --brand-background-color: #d1c7bd;
+}
 
 * {
   margin: 0;
   padding: 0;
 }
 
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 body {
-  background-color: #fff;
-  color: #222;
-  font-family: 'Montserrat', sans-serif;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  font-family: 'Comfortaa', sans-serif;
   font-weight: 300;
 }
 
@@ -22,10 +35,17 @@ body.modal-open {
 }
 
 header {
+  width: 100%;
   position: relative;
 }
 
+.header {
+  background-color: var(--brand-background-color);
+  padding: 18px;
+}
+
 header .logo {
+  color: var(--text-color);
   font-weight: 600;
   font-size: 20px;
 }
@@ -50,13 +70,13 @@ header ul.nav li:focus {
 header .shop-card-button {
   float: right;
   cursor: pointer;
-  transition: color, transform 500ms ease;
+  transition: color 500ms ease, transform 500ms ease;
 }
 
 header .shop-card-button:focus,
 header .shop-card-button:hover,
 header .shop-card-button.active {
-  color: #efdd38;
+  color: var(--base-color);
   transform: scale(1.5);
 }
 
@@ -74,7 +94,9 @@ header .shop-cart {
 }
 
 header .shop-cart .empty h2 {
-  font-size: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--text-color);
   margin-bottom: 20px;
 }
 
@@ -93,16 +115,17 @@ header .shop-cart .item img {
 
 header .shop-cart .item p {
   color: #797979;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 header .shop-cart .item h2 {
   font-size: 20px;
   margin-bottom: 10px;
+  color: var(--text-color);
 }
 
 header .shop-cart .item .delete-icon {
-  color: #ca5252;
+  color: var(--base-color);
   float: right;
   position: relative;
   top: -40px;
@@ -126,7 +149,7 @@ header .shop-cart .summa {
 
 header .presentation {
   margin: 50px 0;
-  background: url('./img/diz-doma.jpeg') no-repeat;
+  background: url('./img/bg.jpeg') no-repeat;
   width: 100%;
   height: 500px;
   background-size: cover;
@@ -137,14 +160,14 @@ header .presentation {
 }
 
 header .presentation::after {
-  content: 'Лучшие товары для вашего дома ';
+  content: 'Декор для вашего уюта';
   position: absolute;
-  top: 100px;
+  top: 150px;
   left: 50px;
   width: 300px;
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 600;
-  color: #fff;
+  color: var(--main-color);
 }
 
 header .presentation::before {
@@ -153,9 +176,9 @@ header .presentation::before {
   top: 250px;
   left: 50px;
   width: 300px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
-  color: #fff;
+  color: var(--main-color);
 }
 
 .categories div {
@@ -166,13 +189,13 @@ header .presentation::before {
   margin-bottom: 25px;
   margin-right: 15px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid var(--base-color);
   transition: all 500ms ease;
 }
 
 .categories div:hover,
 .categories div:focus {
-  border-color: silver;
+  border-color: var(--text-color);
   transform: scale(1.05);
 
 }
@@ -238,12 +261,12 @@ main p,
 main b,
 .full-item b {
   margin: 10px 20px;
-  color: #333;
+  color: var(--text-color);
 }
 
 main b {
-  font-size: 10px;
-  font-weight: 200;
+  font-size: 12px;
+  font-weight: 100;
 }
 
 .full-item b {
@@ -253,7 +276,7 @@ main b {
 
 main p,
 .full-item p {
-  color: #5fa36a;
+  color: var(--nude-color);
 }
 
 main .add-to-cart,
@@ -296,7 +319,31 @@ main .add-to-cart:focus,
   transform: scale(1.1);
 }
 
+.address {
+  padding-bottom: 30px;
+}
+
+.catSoft {
+  padding-top: 40px;
+}
+
 footer {
+
+  display: flex;
+  flex-direction: column;
+  background: var(--brand-background-color);
+  color: #fff;
   text-align: center;
-  margin-top: 100px;
+  padding: 50px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+  padding: 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

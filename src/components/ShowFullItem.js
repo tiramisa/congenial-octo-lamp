@@ -16,8 +16,7 @@ export class ShowFullItem extends Component {
             <ImCancelCircle />
           </button>
           <img
-            width={360}
-            height={350}
+            className=""
             src={'./img/' + this.props.item.img}
             alt=""
             onClick={() => this.props.onShowItem(this.props.item)}

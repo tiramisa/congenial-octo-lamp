@@ -25,7 +25,7 @@ class App extends React.Component {
           img: 'plaid.jpeg',
           title: 'Плед',
           price: 34.99,
-          description: 'Теплый и уютный плед для холодных вечеров.',
+          description: 'Теплый и уютный плед.',
           category: 'plaids',
         },
         {
@@ -33,7 +33,7 @@ class App extends React.Component {
           img: 'table.jpeg',
           title: 'Кофейный столик',
           price: 89.99,
-          description: 'Современный кофейный столик для вашей гостиной.',
+          description: 'Современный кофейный столик.',
           category: 'tables',
         },
         {
