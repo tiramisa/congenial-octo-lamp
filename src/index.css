@@ -232,7 +232,7 @@ header .shop-cart .summa {
 
 
 header .presentation {
-  margin: 50px 0;
+  margin: 0 0 50px 0;
   background: url('./img/bg.jpeg') no-repeat;
   width: 100%;
   height: 500px;
@@ -243,46 +243,110 @@ header .presentation {
   position: relative;
 }
 
+@media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
+    header .presentation::after {
+      content: 'Декор для вашего уюта';
+      position: absolute;
+      top: 150px;
+      left: 50px;
+      width: 300px;
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--main-color);
+    }
+
+    header .presentation::before {
+      content: 'По низким ценам';
+      position: absolute;
+      top: 250px;
+      left: 50px;
+      width: 300px;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--main-color);
+    }
+  }
+}
+
 header .presentation::after {
   content: 'Декор для вашего уюта';
   position: absolute;
-  top: 150px;
-  left: 50px;
-  width: 300px;
-  font-size: 38px;
-  font-weight: 600;
+  top: 100px;
+  left: 25px;
+  width: 200px;
+  font-size: 24px;
+  font-weight: 700;
   color: var(--main-color);
 }
 
 header .presentation::before {
   content: 'По низким ценам';
   position: absolute;
-  top: 250px;
-  left: 50px;
+  top: 180px;
+  left: 25px;
   width: 300px;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 12px;
+  font-weight: 800;
   color: var(--main-color);
 }
 
 .categories div {
-  display: inline-block;
   background: #f2f2f2;
   border-radius: 50px;
-  padding: 10px 20px;
-  margin-bottom: 25px;
-  margin-right: 15px;
-  cursor: pointer;
+  padding: 5px 10px;
   border: 1px solid var(--base-color);
-  transition: all 500ms ease;
+  width: 80px;
 }
 
-.categories div:hover,
-.categories div:focus {
-  border-color: var(--text-color);
-  transform: scale(1.05);
-
+div.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 50px;
+  text-align: center;
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .categories div {
+    background: #f2f2f2;
+    border-radius: 50px;
+    border: 1px solid var(--base-color);
+  }
+
+  div.categories {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 0 25px 50px 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  .categories div:hover,
+  .categories div:focus {
+    border-color: var(--text-color);
+    transform: scale(1.05);
+  }
+
+  .categories div {
+    background: #f2f2f2;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid var(--base-color);
+    transition: all 500ms ease;
+  }
+
+  div.categories {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 0 25px 50px 25px;
+  }
+}
+
 
 .full-item {
   position: fixed;
@@ -326,16 +390,49 @@ main .item {
 main .item img,
 .full-item img {
   width: 100%;
-  transition: transform 500ms ease;
-  cursor: pointer;
 }
 
-main .item img:hover,
-main .item img:focus,
-.full-item .item img:focus,
-.full-item .item img:hover {
-  transform: scale(1.05);
+
+@media only screen and (min-width: 768px) {
+
+  main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #f5f5f5;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+  }
 }
+
+@media only screen and (min-width: 1200px) {
+
+  main .item img:hover,
+  main .item img:focus,
+  .full-item .item img:focus,
+  .full-item .item img:hover {
+    transform: scale(1.05);
+  }
+
+  main .item img,
+  .full-item img {
+    width: 100%;
+    transition: transform 500ms ease;
+    cursor: pointer;
+  }
+
+  main .item {
+    width: 30%;
+    margin-bottom: 50px;
+    background: #f5f5f5;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
+  }
+}
+
 
 main h2,
 .full-item h2,
