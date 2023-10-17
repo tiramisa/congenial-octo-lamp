@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
+import { ImMenu } from 'react-icons/im';
 import { ImCancelCircle } from 'react-icons/im';
 
 import Order from './Order';
@@ -21,7 +22,9 @@ const showOrders = props => {
 const showNothing = () => {
   return (
     <div className="empty">
-      <h2>Начните покупки, чтобы добавить товары в корзину.</h2>
+      <h2 class="shopping-message">
+        Начните покупки, чтобы добавить товары в корзину.
+      </h2>
     </div>
   );
 };
@@ -34,7 +37,7 @@ export default function Header(props) {
         <div className="header">
           <a href="index.html" className="logo">
             House Staff
-          </a>{' '}
+          </a>
           <ul className="nav">
             <li>
               <a href="index.html">Про нас</a>
@@ -45,11 +48,14 @@ export default function Header(props) {
             <li>
               <a href="index.html">Кабинет</a>
             </li>
-          </ul>{' '}
-          <FaShoppingCart
-            onClick={() => setCartOpen((cartOpen = !cartOpen))}
-            className={`shop-card-button ${cartOpen && 'active'}`}
-          />
+          </ul>
+          <div className="header-btn">
+            <FaShoppingCart
+              onClick={() => setCartOpen((cartOpen = !cartOpen))}
+              className={`shop-card-button ${cartOpen && 'active'}`}
+            />
+            <ImMenu className="burger-button" />
+          </div>
         </div>
 
         {cartOpen && (

@@ -14,10 +14,33 @@
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 a {
   color: var(--text-color);
   text-decoration: none;
 }
+
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
 
 body {
   background-color: var(--main-color);
@@ -34,20 +57,27 @@ body.modal-open {
   margin: auto;
 }
 
+/* header */
 header {
   position: relative;
 }
 
 .header {
+  display: flex;
   background-color: var(--brand-background-color);
   padding: 18px;
 }
 
+
 header .logo {
+  padding-right: 150px;
   color: var(--text-color);
   font-weight: 700;
   font-size: 14px;
+  letter-spacing: -.03em;
   line-height: 1.71em;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -61,6 +91,12 @@ header .logo {
   header .logo {
     line-height: 20px;
   }
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header ul.nav li {
@@ -88,8 +124,17 @@ header ul.nav li {
 }
 
 header .shop-card-button {
+  padding-right: 10px;
   cursor: pointer;
   transition: color 500ms ease, transform 500ms ease;
+}
+
+header .shop-cart .empty .shopping-message {
+  font-size: 10px;
+  line-height: 1.01em;
+  text-align: center;
+  color: var(--text-color);
+  padding: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -121,7 +166,7 @@ header .shop-card-button {
     padding-bottom: 0;
   }
 
-  header .shop-cart .empty h2 {
+  header .shop-cart .empty .shopping-message {
     font-size: 14px;
     text-align: center;
     color: var(--text-color);
@@ -340,7 +385,7 @@ main .add-to-cart:focus,
   float: right;
   margin-bottom: 30px;
   transition: all 500ms ease;
-  padding-left: 20px;
+  padding: 10px;
 }
 
 .close-button:hover,
