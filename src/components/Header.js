@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import MyModal from '../components/Burger';
 import { FaShoppingCart } from 'react-icons/fa';
-import { ImMenu } from 'react-icons/im';
-import { ImCancelCircle } from 'react-icons/im';
+import { ImMenu, ImCancelCircle } from 'react-icons/im';
 
 import Order from './Order';
 
@@ -31,6 +31,13 @@ const showNothing = () => {
 
 export default function Header(props) {
   let [cartOpen, setCartOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   return (
     <header>
       <div>
@@ -54,7 +61,8 @@ export default function Header(props) {
               onClick={() => setCartOpen((cartOpen = !cartOpen))}
               className={`shop-card-button ${cartOpen && 'active'}`}
             />
-            <ImMenu className="burger-button" />
+            <ImMenu className="burger" onClick={openModal} />
+            <MyModal isOpen={modalIsOpen} onRequestClose={closeModal} />
           </div>
         </div>
 
