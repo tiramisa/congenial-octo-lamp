@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/congenial-octo-lamp/static/css/main.1c16541d.css",
-    "main.js": "/congenial-octo-lamp/static/js/main.e9dfcd1f.js",
+    "main.css": "/congenial-octo-lamp/static/css/main.3e9cf67d.css",
+    "main.js": "/congenial-octo-lamp/static/js/main.3500db56.js",
     "static/media/bg.jpeg": "/congenial-octo-lamp/static/media/bg.67e9a74f1b6cae8ce052.jpeg",
     "index.html": "/congenial-octo-lamp/index.html",
-    "main.1c16541d.css.map": "/congenial-octo-lamp/static/css/main.1c16541d.css.map",
-    "main.e9dfcd1f.js.map": "/congenial-octo-lamp/static/js/main.e9dfcd1f.js.map"
+    "main.3e9cf67d.css.map": "/congenial-octo-lamp/static/css/main.3e9cf67d.css.map",
+    "main.3500db56.js.map": "/congenial-octo-lamp/static/js/main.3500db56.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c16541d.css",
-    "static/js/main.e9dfcd1f.js"
+    "static/css/main.3e9cf67d.css",
+    "static/js/main.3500db56.js"
   ]
 }
