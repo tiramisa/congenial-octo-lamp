@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Montserrat:wght@700&family=Playfair+Display&family=Ubuntu+Mono&display=swap');
 
 :root {
-  --main-color: #f1ede6;
-  --text-color: #3a2d28;
-  --base-color: #cbad8d;
-  --nude-color: #a48374;
-  --brand-background-color: #d1c7bd;
-  --modal-bg-color: #959d90;
-  --white-color: #fff;
+  --color-main: #f1ede6;
+  --color-text: #3a2d28;
+  --color-base: #cbad8d;
+  --color-nude: #a48374;
+  --color-brand-bg: #d1c7bd;
+  --color-modal-bg: #959d90;
+  --color-white: #fff;
 }
 
 * {
@@ -39,26 +39,13 @@ p {
 }
 
 a {
-  color: var(--text-color);
+  color: var(--color-text);
   text-decoration: none;
 }
 
-/* .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-} */
-
 body {
-  background-color: var(--main-color);
-  color: var(--text-color);
+  background-color: var(--color-main);
+  color: var(--color-text);
   font-family: 'Comfortaa', sans-serif;
   font-weight: 300;
 }
@@ -71,21 +58,19 @@ body.modal-open {
   margin: auto;
 }
 
-/* header */
 header {
   position: relative;
 }
 
 .header {
   display: flex;
-  background-color: var(--brand-background-color);
+  background-color: var(--color-brand-bg);
   padding: 18px;
   justify-content: space-between;
 }
 
-
 header .logo {
-  color: var(--text-color);
+  color: var(--color-text);
   font-weight: 700;
   font-size: 14px;
   letter-spacing: -.03em;
@@ -117,7 +102,6 @@ header ul.nav li {
   display: none;
 }
 
-
 @media screen and (min-width: 1200px) {
   header ul.nav li {
     display: inline;
@@ -142,23 +126,21 @@ header .shop-cart .empty .shopping-message {
   font-size: 10px;
   line-height: 1.01em;
   text-align: center;
-  color: var(--text-color);
+  color: var(--color-text);
   padding: 20px;
 }
 
-@media screen and (min-width: 768px) {
-  @media screen and (min-width: 1200px) {
-    header .shop-card-button {
-      float: right;
-      cursor: pointer;
-      transition: color 500ms ease, transform 500ms ease;
-    }
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  header .shop-card-button {
+    float: right;
+    cursor: pointer;
+    transition: color 500ms ease, transform 500ms ease;
   }
 
   header .shop-card-button:focus,
   header .shop-card-button:hover,
   header .shop-card-button.active {
-    color: var(--base-color);
+    color: var(--color-base);
     transform: scale(1.5);
   }
 
@@ -178,7 +160,7 @@ header .shop-cart .empty .shopping-message {
   header .shop-cart .empty .shopping-message {
     font-size: 14px;
     text-align: center;
-    color: var(--text-color);
+    color: var(--color-text);
     margin-bottom: 20px;
   }
 }
@@ -204,11 +186,11 @@ header .shop-cart .item p {
 header .shop-cart .item h2 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 header .shop-cart .item .delete-icon {
-  color: var(--base-color);
+  color: var(--color-base);
   float: right;
   position: relative;
   top: -40px;
@@ -253,7 +235,7 @@ header .presentation {
       width: 300px;
       font-size: 38px;
       font-weight: 600;
-      color: var(--main-color);
+      color: var(--color-main);
     }
 
     header .presentation::before {
@@ -264,7 +246,7 @@ header .presentation {
       width: 300px;
       font-size: 14px;
       font-weight: 300;
-      color: var(--main-color);
+      color: var(--color-main);
     }
   }
 }
@@ -277,7 +259,7 @@ header .presentation::after {
   width: 200px;
   font-size: 24px;
   font-weight: 700;
-  color: var(--main-color);
+  color: var(--color-main);
 }
 
 header .presentation::before {
@@ -288,14 +270,14 @@ header .presentation::before {
   width: 300px;
   font-size: 12px;
   font-weight: 800;
-  color: var(--main-color);
+  color: var(--color-main);
 }
 
 .categories div {
   background: #f2f2f2;
   border-radius: 50px;
   padding: 5px 10px;
-  border: 1px solid var(--base-color);
+  border: 1px solid var(--color-base);
   width: 80px;
 }
 
@@ -312,7 +294,7 @@ div.categories {
   .categories div {
     background: #f2f2f2;
     border-radius: 50px;
-    border: 1px solid var(--base-color);
+    border: 1px solid var(--color-base);
   }
 
   div.categories {
@@ -327,7 +309,7 @@ div.categories {
 
   .categories div:hover,
   .categories div:focus {
-    border-color: var(--text-color);
+    border-color: var(--color-text);
     transform: scale(1.05);
   }
 
@@ -335,7 +317,7 @@ div.categories {
     background: #f2f2f2;
     border-radius: 50px;
     cursor: pointer;
-    border: 1px solid var(--base-color);
+    border: 1px solid var(--color-base);
     transition: all 500ms ease;
   }
 
@@ -364,7 +346,7 @@ div.categories {
 .full-item>div {
   width: 600px;
   padding: 40px 30px;
-  background: var(--white-color);
+  background: var(--color-white);
   border-radius: 9px;
   position: relative;
   z-index: 1;
@@ -433,7 +415,6 @@ main .item img,
   }
 }
 
-
 main h2,
 .full-item h2,
 main p,
@@ -441,22 +422,50 @@ main p,
 main b,
 .full-item b {
   margin: 10px 20px;
-  color: var(--text-color);
+  color: var(--color-text);
+  font-size: 10px;
 }
 
 main b {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 100;
 }
 
 .full-item b {
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 200;
 }
 
 main p,
 .full-item p {
-  color: var(--nude-color);
+  font-size: 12px;
+  color: var(--color-nude);
+}
+
+@media only screen and (min-width: 768px) {
+
+  main h2,
+  .full-item h2,
+  main p,
+  .full-item p,
+  main b,
+  .full-item b {
+    margin: 10px 20px;
+    color: var(--color-text);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+  main h2,
+  .full-item h2,
+  main p,
+  .full-item p,
+  main b,
+  .full-item b {
+    margin: 10px 20px;
+    color: var(--color-text);
+  }
 }
 
 main .add-to-cart,
@@ -469,7 +478,7 @@ main .add-to-cart,
   height: 35px;
   text-align: center;
   line-height: 35px;
-  color: var(--white-color);
+  color: var(--color-white);
   border-radius: 50%;
   cursor: pointer;
   font-weight: 600;
@@ -511,14 +520,14 @@ main .add-to-cart:focus,
 footer {
   display: flex;
   flex-direction: column;
-  background: var(--brand-background-color);
-  color: var(--text-color);
+  background: var(--color-brand-bg);
+  color: var(--color-text);
   text-align: center;
   padding: 50px;
 }
 
 footer a {
-  color: var(--text-color);
+  color: var(--color-text);
   text-decoration: none;
   margin: 0 5px;
   padding: 10px;
@@ -551,7 +560,7 @@ footer a:hover {
   right: 0;
   bottom: 0;
   width: 50%;
-  background-color: var(--modal-bg-color);
+  background-color: var(--color-modal-bg);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
   transition: transform 250ms ease-in-out;
   z-index: 1001;
@@ -585,7 +594,7 @@ footer a:hover {
   top: 8px;
   right: 14px;
   font-size: 16px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .social-icons {
@@ -597,6 +606,6 @@ footer a:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: var(--main-color);
+  background-color: var(--color-main);
   width: 100%;
 }

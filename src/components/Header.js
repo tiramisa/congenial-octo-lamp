@@ -22,7 +22,7 @@ const showOrders = props => {
 const showNothing = () => {
   return (
     <div className="empty">
-      <h2 class="shopping-message">
+      <h2 className="shopping-message">
         Начните покупки, чтобы добавить товары в корзину.
       </h2>
     </div>
