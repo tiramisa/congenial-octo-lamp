@@ -118,16 +118,27 @@ header ul.nav li {
 
 header .shop-card-button {
   padding-right: 10px;
-  cursor: pointer;
+
   transition: color 500ms ease, transform 500ms ease;
 }
 
 header .shop-cart .empty .shopping-message {
   font-size: 10px;
-  line-height: 1.01em;
+  line-height: 1.2em;
   text-align: center;
   color: var(--color-text);
+  padding: 20px 0 20px 0;
+}
+
+header .shop-cart {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  max-width: 180px;
+  background: var(--color-light-gray);
+  z-index: 9999;
   padding: 20px;
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 768px) and (min-width: 1200px) {
@@ -148,11 +159,9 @@ header .shop-cart .empty .shopping-message {
     position: absolute;
     top: 30px;
     right: 0;
-    width: 450px;
-    background: #fafafa;
-    -webkit-box-shadow: 7px 8px 12px 8px rgba(140, 140, 140, 0.59);
-    box-shadow: 7px 8px 12px 8px rgba(140, 140, 140, 0.59);
-    z-index: 1000;
+    max-width: 500px;
+    background: var(--color-light-gray);
+    z-index: 9999;
     padding: 20px;
     padding-bottom: 0;
   }
@@ -350,12 +359,12 @@ div.categories {
 }
 
 .full-item>div {
-  width: 600px;
+  max-width: 600px;
   padding: 40px 30px;
   background: var(--color-white);
   border-radius: 9px;
   position: relative;
-  z-index: 1;
+  z-index: 9999;
 }
 
 main {
@@ -444,7 +453,7 @@ main b {
 
 main p,
 .full-item p {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-nude);
 }
 
@@ -470,33 +479,53 @@ main p,
   main b,
   .full-item b {
     margin: 10px 20px;
-    color: var(--color-text);
+  }
+
+  main p,
+  .full-item p {
+    font-size: 18px;
   }
 }
 
 main .add-to-cart,
 .full-item .add-to-cart {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 30px;
+  bottom: 30px;
   background: var(--color-primary);
-  width: 35px;
-  height: 35px;
+  width: 26px;
+  height: 26px;
   text-align: center;
-  line-height: 35px;
+  line-height: 30px;
   color: var(--color-white);
   border-radius: 50%;
-  cursor: pointer;
-  font-weight: 600;
-  transition: transform 500ms ease;
+  font-weight: 400;
 }
 
-main .add-to-cart:hover,
-main .add-to-cart:focus,
-.full-item .add-to-cart:hover,
-.full-item .add-to-cart:focus {
-  transform: scale(1.2) translateY(-5px);
+@media only screen and (min-width: 1200px) {
+
+  main .add-to-cart,
+  .full-item .add-to-cart {
+    right: 20px;
+    bottom: 20px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    color: var(--color-white);
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+  }
+
+  main .add-to-cart:hover,
+  main .add-to-cart:focus,
+  .full-item .add-to-cart:hover,
+  .full-item .add-to-cart:focus {
+    transform: scale(1.2) translateY(-5px);
+  }
 }
+
+
 
 .close-button {
   background: transparent;
@@ -506,13 +535,20 @@ main .add-to-cart:focus,
   float: right;
   margin-bottom: 30px;
   transition: all 500ms ease;
-  padding: 10px;
+  font-size: 14px;
 }
 
-.close-button:hover,
-.close-button:focus {
-  color: var(--color-red);
-  transform: scale(1.1);
+@media only screen and (min-width: 1200px) {
+  .close-button {
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .close-button:hover,
+  .close-button:focus {
+    color: var(--color-red);
+    transform: scale(1.1);
+  }
 }
 
 .address {
@@ -557,7 +593,7 @@ footer a:hover {
   width: 0;
   background-color: rgba(0, 0, 0, 0.5);
   transition: transform 250ms ease-in-out;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .modal-content {
@@ -569,7 +605,7 @@ footer a:hover {
   background-color: var(--color-modal-bg);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
   transition: transform 250ms ease-in-out;
-  z-index: 1001;
+  z-index: 9999;
 }
 
 .modal.open .modal-overlay {
