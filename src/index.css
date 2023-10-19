@@ -457,7 +457,7 @@ main p,
   color: var(--color-nude);
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
   main h2,
   .full-item h2,
@@ -465,12 +465,12 @@ main p,
   .full-item p,
   main b,
   .full-item b {
+    font-size: 14px;
     margin: 10px 20px;
-    color: var(--color-text);
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
 
   main h2,
   .full-item h2,
@@ -511,7 +511,6 @@ main .add-to-cart,
     width: 35px;
     height: 35px;
     line-height: 35px;
-    color: var(--color-white);
     cursor: pointer;
     font-weight: 600;
     transition: transform 500ms ease;
