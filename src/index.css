@@ -230,7 +230,7 @@ header .presentation {
   background-size: cover;
   background-position: center center;
   background-blend-mode: multiply;
-  background-color: var(--color-img-bg);
+  background-color: var(--color-brand-bg);
   position: relative;
 }
 
